@@ -1,31 +1,29 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    int gecenSure = 0;
-
-    void ZamaniGuncelle()
+    IEnumerator RoutineENC()
     {
-        gecenSure++;
-        Debug.Log("Geçen zaman: " + gecenSure + " saniye.");
+        for (int i = 0; i < 10; i++)
+        {
+            Debug.Log("Döngü adýmý: " + i);
+            yield return new WaitForSeconds(1f); // her adýmda 1 saniye bekle
+        }
     }
 
-    void ZamaniDurdur()
+    IEnumerator SonsuzRoutine()
     {
-        CancelInvoke("ZamaniGuncelle");
-        Debug.Log("Sayaç durduruldu");
+        while (true)
+        {
+            Debug.Log("Sürekli çalýþýyor.");
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     private void Start()
     {
-        InvokeRepeating("ZamaniGuncelle", 1f,1f);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ZamaniDurdur();
-        }
+        StartCoroutine(RoutineENC());
+        StartCoroutine(SonsuzRoutine());
     }
 }
