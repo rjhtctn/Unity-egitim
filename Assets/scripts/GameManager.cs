@@ -1,15 +1,24 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // play butonuna bastýðýmýzda ilk çalýþan fonksiyondur. bir kez çalýþýr
-    private void Awake()
+    public GameObject[] enemies;
+
+    //nesne aktif olduðu zaman çalýþýr
+    private void OnEnable()
     {
-        Debug.Log("awake çalýþtý.");
+        Debug.Log("Nesne aktif oldu");
     }
-    // awake'ten sonra çalýþýr. bir kez çalýþýr
-    void Start()
+
+    // nesne deaktif olduðu zaman çalýþýr
+    private void OnDisable()
     {
-        print("start çalýþtý");
+        Debug.Log("nesne devre dýþý býrakýldý");
+
+        foreach (var enemy in enemies) 
+        {
+            Debug.Log(enemy.name);    
+        }
     }
 }

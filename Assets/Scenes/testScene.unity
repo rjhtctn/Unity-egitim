@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 120361127}
   - component: {fileID: 120361126}
   m_Layer: 0
-  m_Name: altKup (2)
+  m_Name: sagKup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120361125}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 310395249}
   - component: {fileID: 310395248}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: zemin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 889779437}
   - component: {fileID: 889779436}
   m_Layer: 0
-  m_Name: altKup (1)
+  m_Name: ortaKup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 991626366}
   - component: {fileID: 991626365}
   m_Layer: 0
-  m_Name: altKup (3)
+  m_Name: solKup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,6 +709,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11226db4304a7cf41a4b5a085462fe4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  enemies:
+  - {fileID: 120361125}
+  - {fileID: 1616731683}
+  - {fileID: 991626364}
 --- !u!4 &1825766972
 Transform:
   m_ObjectHideFlags: 0
@@ -1008,8 +1012,8 @@ SceneRoots:
   - {fileID: 1978779292}
   - {fileID: 1966626768}
   - {fileID: 310395251}
-  - {fileID: 1616731687}
   - {fileID: 120361129}
+  - {fileID: 1616731687}
   - {fileID: 991626368}
   - {fileID: 889779439}
   - {fileID: 1825766972}
