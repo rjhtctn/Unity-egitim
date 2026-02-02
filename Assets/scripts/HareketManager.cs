@@ -2,11 +2,18 @@ using UnityEngine;
 
 public class HareketManager : MonoBehaviour
 {
-    public float hareketHizi = 5f;
-    public Vector3 vektor = Vector3.zero;
-    void Update()
+    private Rigidbody rb;
+    private Vector3 vektor = Vector3.zero;
+
+    private void Awake()
     {
-        vektor.x = 1f;
-        transform.Translate(vektor * hareketHizi * Time.deltaTime);
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+        vektor.x = 5f;
+    }
+
+    private void Update()
+    {
+        rb.linearVelocity = vektor;
     }
 }
