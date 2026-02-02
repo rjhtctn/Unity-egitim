@@ -1,35 +1,31 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Invoke istediðimiz süre gecikmeden sonra fonksiyonu bir kez çaðýrýr.
-    // Invoke("fonksiyon ismi", gecikme süresi);
-    // InvokeRepeating belirli bir süre gecikmeden sonra bir fonksiyonu periyodik olarak çaðýrýr
-    private float gecikmeSuresi;
-    private float tekrarSuresi;
-    void YazdirInvoke()
+    int gecenSure = 0;
+
+    void ZamaniGuncelle()
     {
-        Debug.Log($"Bu Mesaj {gecikmeSuresi} saniye sonra görüntülenecek: Invoke");
+        gecenSure++;
+        Debug.Log("Geçen zaman: " + gecenSure + " saniye.");
     }
 
-    void YazdirInvokeRepeating()
+    void ZamaniDurdur()
     {
-        Debug.Log($"Bu Mesaj {tekrarSuresi} saniye aralýlarla tekrarlanacak: InvokeRepeating");
-    }
-
-    void iptalInvoke()
-    {
-        CancelInvoke("TekrarliYazdir");
+        CancelInvoke("ZamaniGuncelle");
+        Debug.Log("Sayaç durduruldu");
     }
 
     private void Start()
     {
-        gecikmeSuresi = 5.0f;
-        Invoke("YazdirInvoke", gecikmeSuresi);
-        tekrarSuresi = 3.0f;
-        InvokeRepeating("YazdirInvokeRepeating", gecikmeSuresi, tekrarSuresi);
-        iptalInvoke();
+        InvokeRepeating("ZamaniGuncelle", 1f,1f);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ZamaniDurdur();
+        }
     }
 }
