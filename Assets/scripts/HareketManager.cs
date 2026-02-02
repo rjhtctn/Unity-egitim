@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class HareketManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        transform.position = new Vector3(5f, transform.position.y, transform.position.z);
-    }
+    public float hareketHizi = 5f;
 
-    // Update is called once per frame
+    // Time.deltaTime = 1 / fps
     void Update()
     {
-        transform.position = transform.position + new Vector3(0.005f, 0, 0);
+        // transform.position += new Vector3(1, 0, 0) * Time.deltaTime * hareketHizi;
+        transform.position += Vector3.right * hareketHizi * Time.deltaTime;
     }
 }
