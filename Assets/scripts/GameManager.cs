@@ -4,24 +4,32 @@ using UnityEngine.Rendering.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // update fonksiyonu her karede bir kez çaðýrýlýr.
-    private void Update()
+    // Invoke istediðimiz süre gecikmeden sonra fonksiyonu bir kez çaðýrýr.
+    // Invoke("fonksiyon ismi", gecikme süresi);
+    // InvokeRepeating belirli bir süre gecikmeden sonra bir fonksiyonu periyodik olarak çaðýrýr
+    private float gecikmeSuresi;
+    private float tekrarSuresi;
+    void YazdirInvoke()
     {
-        Debug.Log("Update çalýþtý");      
+        Debug.Log($"Bu Mesaj {gecikmeSuresi} saniye sonra görüntülenecek: Invoke");
     }
 
-    // FixedUpdate sabit zaman aralýklarý ile çalýþýr. varsayýlan olarak her 0.02 saniyede çalýþýr.
-    private void FixedUpdate()
+    void YazdirInvokeRepeating()
     {
-        Debug.Log("FixedUpdate çalýþtý");
+        Debug.Log($"Bu Mesaj {tekrarSuresi} saniye aralýlarla tekrarlanacak: InvokeRepeating");
     }
 
-    // LateUpdate her karenin sonunda çalýþýr.
-    // bu metod genellikle diðer objeler üzerindeki iþlemler tamamlandýktan sonra kullanýlýr.
-    // kamera takip hareketleri
-    // diðer objelerin güncellenmesini beklemek
-    private void LateUpdate()
+    void iptalInvoke()
     {
-        Debug.Log("LateUpdate çalýþtý");
+        CancelInvoke("TekrarliYazdir");
+    }
+
+    private void Start()
+    {
+        gecikmeSuresi = 5.0f;
+        Invoke("YazdirInvoke", gecikmeSuresi);
+        tekrarSuresi = 3.0f;
+        InvokeRepeating("YazdirInvokeRepeating", gecikmeSuresi, tekrarSuresi);
+        iptalInvoke();
     }
 }
