@@ -3,11 +3,10 @@ using UnityEngine;
 public class HareketManager : MonoBehaviour
 {
     public float hareketHizi = 5f;
-
-    // Time.deltaTime = 1 / fps
+    public Vector3 vektor = Vector3.zero;
     void Update()
     {
-        // transform.position += new Vector3(1, 0, 0) * Time.deltaTime * hareketHizi;
-        transform.position += Vector3.right * hareketHizi * Time.deltaTime;
+        vektor.x = 1f;
+        transform.Translate(vektor * hareketHizi * Time.deltaTime);
     }
 }
