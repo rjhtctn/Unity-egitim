@@ -1,24 +1,27 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] enemies;
-
-    //nesne aktif olduðu zaman çalýþýr
-    private void OnEnable()
+    // update fonksiyonu her karede bir kez çaðýrýlýr.
+    private void Update()
     {
-        Debug.Log("Nesne aktif oldu");
+        Debug.Log("Update çalýþtý");      
     }
 
-    // nesne deaktif olduðu zaman çalýþýr
-    private void OnDisable()
+    // FixedUpdate sabit zaman aralýklarý ile çalýþýr. varsayýlan olarak her 0.02 saniyede çalýþýr.
+    private void FixedUpdate()
     {
-        Debug.Log("nesne devre dýþý býrakýldý");
+        Debug.Log("FixedUpdate çalýþtý");
+    }
 
-        foreach (var enemy in enemies) 
-        {
-            Debug.Log(enemy.name);    
-        }
+    // LateUpdate her karenin sonunda çalýþýr.
+    // bu metod genellikle diðer objeler üzerindeki iþlemler tamamlandýktan sonra kullanýlýr.
+    // kamera takip hareketleri
+    // diðer objelerin güncellenmesini beklemek
+    private void LateUpdate()
+    {
+        Debug.Log("LateUpdate çalýþtý");
     }
 }
