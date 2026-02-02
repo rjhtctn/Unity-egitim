@@ -131,8 +131,9 @@ GameObject:
   - component: {fileID: 120361128}
   - component: {fileID: 120361127}
   - component: {fileID: 120361126}
+  - component: {fileID: 120361130}
   m_Layer: 0
-  m_Name: sagKup
+  m_Name: hareketKup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,13 +225,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120361125}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 3, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120361130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120361125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4468f0676718a40af42b6236c2306b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HareketManager
 --- !u!1 &310395247
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,8 +351,8 @@ Transform:
   m_GameObject: {fileID: 310395247}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -357,12 +370,12 @@ GameObject:
   - component: {fileID: 889779437}
   - component: {fileID: 889779436}
   m_Layer: 0
-  m_Name: ortaKup
+  m_Name: ortaCubuk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &889779436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,12 +482,12 @@ GameObject:
   - component: {fileID: 991626366}
   - component: {fileID: 991626365}
   m_Layer: 0
-  m_Name: solKup
+  m_Name: sagKup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &991626365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -562,7 +575,7 @@ Transform:
   m_GameObject: {fileID: 991626364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -586,7 +599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1616731684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -938,8 +951,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978779289}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.21858321, y: 0.01232889, z: -0.002775484, w: 0.9757365}
+  m_LocalPosition: {x: 0.017180648, y: 12.596169, z: -23.041037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
