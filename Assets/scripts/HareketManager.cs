@@ -3,17 +3,21 @@ using UnityEngine;
 public class HareketManager : MonoBehaviour
 {
     private Rigidbody rb;
-    private Vector3 vektor = Vector3.zero;
+    private float force = 500f;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
-        vektor.x = 5f;
     }
 
     private void Update()
     {
-        rb.linearVelocity = vektor;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * force, ForceMode.Force); // f = m * a newton yasasý devamlý uygulanýr
+            rb.AddForce(Vector3.up * force, ForceMode.Impulse); // anlýk kuvvet uygulanýr. hýzda ani bir deðiþiklik yapar 
+            rb.AddForce(Vector3.up * force, ForceMode.VelocityChange); // kütleden baðýmsýz nesnenin hýzýný doðrudan deðiþtirir.
+            rb.AddForce(Vector3.up * force, ForceMode.Acceleration); // kütleden baðýmsýz bir ivme uygulanýr
+        }
     }
 }
