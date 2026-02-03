@@ -1,1 +1,67 @@
-🎮 Unity Game Development Bootcamp: Sıfırdan ZirveyeBu repository, Unity oyun motoru ve C# ile gerçekleştirilen kapsamlı oyun geliştirme eğitiminin tüm projelerini, kodlarını ve notlarını içermektedir. Eğitim süresince 20 ana bölüm tamamlanmış ve 3 tam kapsamlı oyun geliştirilmiştir.📚 EĞİTİM MÜFREDATI VE TAMAMLANAN BÖLÜMLERAşağıda, bu depo içerisinde yer alan çalışmaların detaylı dökümü bulunmaktadır:🟢 BÖLÜM 1-4: Arayüz ve Temeller4. Unity'nin Arayüzünü TanıyalımScene ve Game PencereleriHierarchy ve Project PencereleriInspector Penceresi ve Komponent MantığıToolbars ve Önemli AraçlarAsset Store ve Package Manager Kullanımı🟡 BÖLÜM 5-7: Fizik ve Kodlama Mantığı5. Rigidbody ve Collider ile Fizik TemelleriSahne HazırlığıRigidbody Component'i ve AyarlarıCollider Çeşitleri ve Fizik Etkileşimleri6. Unity'ye Özel Fonksiyonlar (Lifecycle)İlk C# Script'i ve Console TestleriAwake ve Start FarklarıOnEnable ve OnDisable KullanımıUpdate, FixedUpdate ve LateUpdate DöngüleriInvoke ve InvokeRepeating ile ZamanlamaCoroutine (IEnumerator) Mantığı ve Kullanımı7. Unity'de Hareket MetotlarıDirekt Pozisyon DeğiştirmeTime.deltaTime KavramıTransform.Translate KullanımıRigidbody.velocity ile HareketRigidbody.AddForce ile Kuvvet UygulamaVector3.MoveTowards (Hedefe Gitme)Vector3.Lerp (Yumuşak Geçiş)Coroutine ile Hareket Kontrolü🟠 BÖLÜM 8-10: Girdi Sistemleri ve UI8. Kullanıcı Girişleri (Input System)Klavye Girişleri ve Yöntemleri (GetKey, GetKeyDown)Klavye ile YönlendirmeMouse Input Metotları (OnMouseDown, OnMouseDrag)Mouse ile Nesne TaşımaNew Input System Nedir ve Nasıl Kullanılır?9. Grafik, Işıklandırma ve KameraMesh, Material ve Texture KavramlarıMateryal Atama ve DüzenlemeKamera Ayarları ve Projeksiyon TürleriPost Processing (Görüntü İşleme) EfektleriDirectional Light ve Işık Türleri10. Canvas (UI) ElemanlarıCanvas Nedir? Render Mode AyarlarıText ve TextMeshPro KullanımıImage, Button, Panel BileşenleriScrollView ve ScrollBar YapısıDropdown ve InputField ile Veri Alma🚀 PROJE 1: 3D PLATFORM OYUNU (Bölüm 11)11. 3D Platform Oyunu YapıyoruzProje Oluşturma ve Asset EntegrasyonuOyuncu Hareketi ve Kamera Takibi KodlamasıDönen ve Hareketli Engeller OluşturmaÇarpışma Kontrolleri (Collision Detection)Etiket (Tag) Sistemi ile Nesne TanımaEngele Çarpınca Puan Azalma / Can SistemiYuvarlanan EngellerLevel Sonu Tasarımı ve Sahne Geçişleri🔵 PROJE 2: RESİM EŞLEŞTİRME OYUNU (Bölüm 12-13)12. Resimleri Eşleştirme Oyunu YapalımSürükle-Bırak (Drag & Drop) MekaniğiDoğru Yere Bırakma KontrolüDOTween ile Yumuşak Kart EfektleriDoğru/Yanlış Eşleşme AlgoritmalarıHak Paneli ve Oyun Mantığı13. Unity'de AnimasyonAnimation ve Animator Panelleri2D Karakter Animasyonları ve Geçişler (Transitions)Animasyon Parametreleri (Bool, Float, Trigger)Mixamo'dan 3D Karakter ve Animasyon İndirme3D Karakter Entegrasyonu🟣 BÖLÜM 14-18: İleri Seviye Araçlar ve Veri14. TileMap ve TerrainSprite Parçalama (Slice)TileMap Palette ve Fırça AyarlarıTileMap ColliderTerrain Oluşturma ve ŞekillendirmeAraziye Ağaç, Çim ve Detay Ekleme15. Unity'de Ses (Audio)AudioSource ve AudioListener BileşenleriKod ile Ses Çaldırma (PlayOneShot)Detaylı Ses Kontrolü ve Efektler16. Cinemachine ve KameraCinemachine Kurulumu ve Virtual CameraKarakter Takip Eden Kamera (Follow/LookAt)TPS ve FreeLook Kamera SistemleriKamera Sarsılma (Shake) Efekti17. Particle System (Efektler)Particle System ÖzellikleriEmisyon, Şekil ve Renk Ayarları18. Veri Yönetimi (Data Persistence)Class Yapıları ile Veri TutmaPrefab Çoğaltma ve Veri YazdırmaJSON Nedir? JSON Oluşturma ve OkumaPlayerPrefs ile Basit Veri Kaydı🔥 PROJE 3: SPACE SHOOTER (Bölüm 19)19. Space Shooter (Uzay Savaşı) OyunuSonsuz Tekrar Eden Arka Plan (Infinite Scrolling)Hareket Sınırlandırma (Clamping)Mermi Oluşturma ve Fırlatma (Instantiate)Rastgele Gezegen ve Meteor Spawner SistemleriMeteor Patlama Efektleri ve Yok EtmeCan Barı (Health System) ve UI EntegrasyonuHedef Nesneler ve Dalga (Wave) MantığıPause, Game Over ve Finish Panellerinin KodlanmasıSeslendirme Ayarları🏁 BÖLÜM 20: Çıktı Alma (Build)20. Çıktı Alma YöntemleriPC için .exe Çıktısı AlmaWeb için WebGL Çıktısı AlmaMobil için Android (APK) Çıktısı Alma ve Ayarlar💻 Kurulum ve TestBu projeyi bilgisayarınızda görüntülemek için:Repoyu klonlayın: git clone https://github.com/rjhtctn/Unity-egitim.gitUnity Hub üzerinden projeyi ekleyin (Add Project).Assets/Scenes klasörü altından incelemek istediğiniz oyunun sahnesini açın.Bu proje Unity öğrenim sürecimdeki gelişimimi belgelemektedir.
+# 🎮 Unity Game Development Bootcamp: Sıfırdan Zirveye
+
+![Unity Version](https://img.shields.io/badge/Unity-2022.3+-blue?logo=unity)
+![Language](https://img.shields.io/badge/C%23-Language-green?logo=csharp)
+![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20Mobile%20%7C%20Web-orange)
+
+Bu repository, Unity oyun motoru ve C# ile gerçekleştirilen kapsamlı oyun geliştirme eğitiminin tüm projelerini, kodlarını ve notlarını içermektedir. Eğitim süresince **20 ana bölüm** tamamlanmış ve **3 tam kapsamlı oyun** geliştirilmiştir.
+
+---
+
+## 📚 Eğitim Müfredatı ve Tamamlanan Bölümler
+
+### 🟢 Temeller ve Fizik (Bölüm 1-7)
+* **Arayüz:** Scene, Game, Hierarchy, Project ve Inspector pencerelerinin efektif kullanımı.
+* **Lifecycle (Yaşam Döngüsü):** `Awake`, `Start`, `Update`, `FixedUpdate` ve `LateUpdate` arasındaki farklar.
+* **Fizik Dünyası:** Rigidbody ve Collider komponentleri ile fiziksel etkileşimler.
+* **Hareket Metotları:** `Transform.Translate`, `AddForce`, `Velocity`, `Lerp` ve `MoveTowards` yöntemleri.
+* **Zamanlama:** `Coroutine` (IEnumerator) ve `Invoke` yapıları.
+
+
+
+### 🟡 Giriş Sistemleri ve UI (Bölüm 8-10)
+* **Input System:** Klasik ve New Input System ile klavye/mouse kontrolleri.
+* **Görsel ve Işık:** Material, Texture, Post-Processing ve Işık türleri.
+* **UI Tasarımı:** Canvas sistemi, TextMeshPro, Button ve ScrollView bileşenleri.
+
+### 🟣 İleri Seviye Araçlar ve Veri (Bölüm 14-18)
+* **Dünya Oluşturma:** TileMap (2D) ve Terrain (3D) ile çevre tasarımı.
+* **Ses ve Kamera:** `AudioSource` yönetimi ve **Cinemachine** ile dinamik kamera sistemleri.
+* **Efektler:** Particle System ile görsel efekt üretimi.
+* **Veri Yönetimi:** `PlayerPrefs` ve `JSON` ile veri kaydetme/okuma işlemleri.
+
+---
+
+## 🚀 Geliştirilen Projeler
+
+Eğitim boyunca teorik bilgilerin pratiğe döküldüğü 3 ana proje:
+
+### 1. 3D Platform Oyunu
+Geleneksel platform mekaniklerinin temellerini içeren, engel odaklı bir oyun.
+* **Öne Çıkanlar:** Karakter hareketi, tag sistemi, can/puan mekaniği ve sahne geçişleri.
+
+### 2. Resim Eşleştirme Oyunu
+Hafıza ve sürükle-bırak mantığına dayalı 2D/3D hibrit çalışma.
+* **Öne Çıkanlar:** `Drag & Drop` mekaniği, **DOTween** ile animasyonlar, Mixamo entegrasyonu ve Animator yönetimi.
+
+### 3. Space Shooter (Uzay Savaşı)
+Hızlı aksiyon ve sonsuz döngü mantığının kurgulandığı kapsamlı proje.
+* **Öne Çıkanlar:** `Instantiate` ile mermi yönetimi, Object Spawner, Wave (Dalga) sistemi ve Infinite Scrolling arka plan.
+
+---
+
+## 🏁 Çıktı Alma (Build)
+Eğitim sonunda projeler şu platformlar için optimize edilmiştir:
+* 💻 **PC:** Standalone .exe çıktıları.
+* 🌐 **Web:** WebGL tarayıcı tabanlı sürümler.
+* 📱 **Mobil:** Android (APK) yapılandırmaları.
+
+---
+
+## 💻 Kurulum ve Test
+
+Bu projeyi yerel bilgisayarınızda incelemek için şu adımları izleyin:
+
+1. **Repoyu Klonlayın:**
+   ```bash
+   git clone [https://github.com/rjhtctn/Unity-egitim.git](https://github.com/rjhtctn/Unity-egitim.git)
