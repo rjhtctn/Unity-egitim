@@ -2,22 +2,47 @@ using UnityEngine;
 
 public class HareketManager : MonoBehaviour
 {
-    private Rigidbody rb;
-    private float force = 500f;
+    private Transform[] hedef;
+    private float hiz = 5f;
+    private int index = 0;
 
-    private void Awake()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("hedef");
+
+        if (objs.Length == 0)
+        {
+            Debug.Log("hedef bulunamadý!");
+            return;
+        }
+
+        Debug.Log(objs.Length);
+
+        System.Array.Sort(objs, (a, b) => string.Compare(a.name, b.name));
+
+        hedef = new Transform[objs.Length];
+
+        for(int i = 0; i < objs.Length; i++)
+        {
+            hedef[i] = objs[i].transform;
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (index >= hedef.Length) return;
+
+        if (index < hedef.Length)
         {
-            rb.AddForce(Vector3.up * force, ForceMode.Force); // f = m * a newton yasasý devamlý uygulanýr
-            rb.AddForce(Vector3.up * force, ForceMode.Impulse); // anlýk kuvvet uygulanýr. hýzda ani bir deðiþiklik yapar 
-            rb.AddForce(Vector3.up * force, ForceMode.VelocityChange); // kütleden baðýmsýz nesnenin hýzýný doðrudan deðiþtirir.
-            rb.AddForce(Vector3.up * force, ForceMode.Acceleration); // kütleden baðýmsýz bir ivme uygulanýr
+            transform.position =
+                Vector3.MoveTowards(transform.position, hedef[index].position, hiz * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, hedef[index].position) < 0.2f)
+            {
+                index++;
+            }
         }
+        
+        
     }
 }
