@@ -42,7 +42,5 @@ public class HareketManager : MonoBehaviour
                 index++;
             }
         }
-        
-        
     }
 }
