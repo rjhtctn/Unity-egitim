@@ -12,6 +12,14 @@
 /[Uu]ser[Ss]ettings/
 *.log
 
+**/[Tt]emp/
+**/[Ll]ibrary/
+**/[Bb]uild/
+**/[Oo]bj/
+**/[Ll]ogs/
+*.csproj
+*.sln
+
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
 *.blend1.meta
