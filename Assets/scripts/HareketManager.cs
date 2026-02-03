@@ -1,20 +1,31 @@
+using System.Collections;
 using UnityEngine;
 
 public class HareketManager : MonoBehaviour
 {
-    // Vector3.Lerp(vector3 a, vector3 b, float t);
-    // t 0 iken baþlangýç noktasýndadýr 1 olduðunda hedefe varýr.
-
     private Transform hedef;
-    private float hiz = 2f;
+    private float gidisSuresi = 2f;
 
     private void Start()
     {
         hedef = GameObject.FindWithTag("hedef").transform;
+        StartCoroutine(HareketEtRoutine(hedef.position, gidisSuresi));
     }
 
-    private void Update()
+    IEnumerator HareketEtRoutine(Vector3 hedefPos, float sure)
     {
-        transform.position = Vector3.Lerp(transform.position, hedef.position, hiz * Time.deltaTime);
+        Vector3 baslangisPos = transform.position;
+        float gecenSure = 0f;
+
+        while (gecenSure <  sure)
+        {
+            transform.position = Vector3.Lerp(baslangisPos, hedefPos, gecenSure / sure);
+            gecenSure += Time.deltaTime;
+
+            yield return null; // bir sonraki frame e geçiþ
+        }
+
+        // hedef pozisyona tam olarak yerleþ
+        transform.position = hedefPos;
     }
 }

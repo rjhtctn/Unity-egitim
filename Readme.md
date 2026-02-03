@@ -162,7 +162,7 @@ Aşağıda, bu depo içerisinde yer alan çalışmaların detaylı dökümü bul
 1. Repoyu klonlayın:
 ```bash
 git clone https://github.com/rjhtctn/Unity-egitim.git
-
+```
 2. Unity Hub → Add Project
 
 3. Assets/Scenes klasöründen sahneyi açın
